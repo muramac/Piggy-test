@@ -340,7 +340,66 @@ def finale():
         lbl_result_8.pack()
         lbl_pikcha7.image = img7
         lbl_pikcha7.pack()
-
+    elif gay >= 2 and hui >= 2:
+        lbl_14 = tk.Label(root, text = "Криповый кабан",font=("Comic Sans", 26))
+        lbl_result_9 = tk.Label(root, text= "Порось, которому лучше не пиздеть лишнего," + '\n' + "сбежал со сибиреязвенного скотомогильника, характер скверный, не женат", font=("Comic Sans", 20))
+        img8 = PhotoImage(file = 'final8.png')
+        lbl_pikcha8 = Label(root)
+        lbl_pikcha8.configure(image=img8, width=img8.width(),height=img8.height())
+        lbl_14.pack()
+        lbl_result_9.pack()
+        lbl_pikcha8.image = img8
+        lbl_pikcha8.pack()
+    elif exp >= 2 and mate >= 2:
+        lbl_15 = tk.Label(root, text = "АХАХАХАХАХАХА это кто нахуй",font=("Comic Sans", 26))
+        lbl_result_10 = tk.Label(root, text= "Еблан, ты как блять вообще получил этот результат", font=("Comic Sans", 20))
+        img9 = PhotoImage(file = 'final9.png')
+        lbl_pikcha9 = Label(root)
+        lbl_pikcha9.configure(image=img9, width=img9.width(),height=img9.height())
+        lbl_15.pack()
+        lbl_result_10.pack()
+        lbl_pikcha9.image = img9
+        lbl_pikcha9.pack()
+    elif hui >= 2 and mate >= 2:
+        lbl_16 = tk.Label(root, text = "Хог в заточении",font=("Comic Sans", 26))
+        lbl_result_11 = tk.Label(root, text= "Ты норм кент, но порой бываешь непослушной свинкой" + '\n' + "для твоего же блага и в целях сохранения анальной девственности"  + '\n' + "поросячьего стада тебя поместили в дурку", font=("Comic Sans", 20))
+        img10 = PhotoImage(file = 'final10.png')
+        lbl_pikcha10 = Label(root)
+        lbl_pikcha10.configure(image=img10, width=img10.width(),height=img10.height())
+        lbl_16.pack()
+        lbl_result_11.pack()
+        lbl_pikcha10.image = img10
+        lbl_pikcha10.pack()
+    elif hui >= 2 and exp >= 2:
+        lbl_17 = tk.Label(root, text = "Философ",font=("Comic Sans", 26))
+        lbl_result_12 = tk.Label(root, text= "Свинка филосовствствующая о жизни, но из-за своей" + '\n' + "поросячей натуры, не в силах изменить собственную жизнь", font=("Comic Sans", 20))
+        img11 = PhotoImage(file = 'final11.png')
+        lbl_pikcha11 = Label(root)
+        lbl_pikcha11.configure(image=img11, width=img11.width(),height=img11.height())
+        lbl_17.pack()
+        lbl_result_12.pack()
+        lbl_pikcha11.image = img11
+        lbl_pikcha11.pack()
+    elif gay >= 2 and exp >= 2:
+        lbl_18 = tk.Label(root, text = "Хойщик",font=("Comic Sans", 26))
+        lbl_result_13 = tk.Label(root, text= "Zrada! *hoink* Männer Peremoga des deutschen Reichstages! " + '\n' + " Seit *hoink* Monaten leiden wir alle unter der Qual eines Problems, " + '\n' + " das uns auch der *hoink* Versailler Vertrag, d.h. das Versailler Diktat, " + '\n' + " einst beschert hat *weeeeeee* ", font=("Comic Sans", 20))
+        img12 = PhotoImage(file = 'final12.png')
+        lbl_pikcha12 = Label(root)
+        lbl_pikcha12.configure(image=img12, width=img12.width(),height=img12.height())
+        lbl_18.pack()
+        lbl_result_13.pack()
+        lbl_pikcha12.image = img12
+        lbl_pikcha12.pack()
+    elif gay >= 2 and mate >= 2:
+        lbl_19 = tk.Label(root, text = "Патимейкер",font=("Comic Sans", 26))
+        lbl_result_14 = tk.Label(root, text= "скр скр скр в мёртвых найках скр скр скр патимейкер", font=("Comic Sans", 20))
+        img13 = PhotoImage(file = 'final13.png')
+        lbl_pikcha13 = Label(root)
+        lbl_pikcha13.configure(image=img13, width=img13.width(),height=img13.height())
+        lbl_19.pack()
+        lbl_result_14.pack()
+        lbl_pikcha13.image = img13
+        lbl_pikcha13.pack()
     
     else:
         labl = Label(root, text="А тут нихуя нет потому что заказчик уебан!" + '\n' + "Не может придумать текста для результатов", font=("Comic Sans", 26))
