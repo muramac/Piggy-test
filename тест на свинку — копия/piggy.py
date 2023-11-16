@@ -402,7 +402,7 @@ def finale():
         lbl_pikcha13.pack()
     
     else:
-        labl = Label(root, text="А тут нихуя нет потому что заказчик уебан!" + '\n' + "Не может придумать текста для результатов", font=("Comic Sans", 26))
+        labl = Label(root, text="Данил - клоун", font=("Comic Sans", 26))
         labl.pack()
 
 
