@@ -170,6 +170,16 @@ def finalexp():
     global exp
     exp += 1
     finale()
+def restart():
+    for i in lists:
+        i.destroy()
+    lists.clear()
+    global exp
+    global hui
+    global mate
+    global gay
+    exp, hui, mate, gay = 0, 0, 0, 0
+    ques_one()
 
 
 root = tk.Tk()
@@ -260,6 +270,9 @@ def ques_five():
 '''btn_22 = tk.Button(root, text="Результаты", fg='red', width=16, height=1, font=("Comic Sans", 26), command=results)
 btn_22.pack()'''
 def finale():
+    res = Button(root, text='Заново',width=15, height=1,command=restart)
+    res.pack()
+    lists.append(res)
     if hui == 5 and gay == 0 and exp == 0 and mate == 0:
         lbl_6 = tk.Label(root, text='Ты просто невменяемый уебан', font=("Comic Sans", 26))
         lbl_result_1 =  tk.Label(root, text='Ты - это олицетворение пиздеца и хуёвости, лично после такого ужасного' + '\n' + 'результата я бы захуярил тебя сам голыми руками, как и любой другой человек.' + '\n' + 'Иди лечись, долбаёб, ты - мега хуёвый срущий кабан. долбаёб', font=("Comic Sans", 20))
@@ -270,6 +283,9 @@ def finale():
         lbl_6.pack()
         lbl_result_1.pack()
         lbl_pikcha.pack()
+        lists.append(lbl_result_1)
+        lists.append(lbl_6)
+        lists.append(lbl_pikcha)
     elif hui == 0 and gay == 5 and exp == 0 and mate == 0:
         lbl_7 = tk.Label(root, text = "Ты гуль - свинья", font=("Comic Sans", 26))
         lbl_result_2 = tk.Label(root, text="Все очевидно, ты любишь доту и свой пека" + '\n' + "любое женское внимание ты бы с радостью променял на пару толстых," + '\n' + " жилистых членов. Единственная вещь, озаряющая твою жизнь" + '\n' + " - это твой, отчим, ебущий тебя" +'\n' + "в жопу, каждый раз как ты пикаешь эсфа", font=("Comic Sans", 26))
@@ -280,6 +296,9 @@ def finale():
         lbl_7.pack()
         lbl_result_2.pack()
         lbl_pikcha1.pack()
+        lists.append(lbl_result_2)
+        lists.append(lbl_7)
+        lists.append(lbl_pikcha1)
     elif hui == 0 and gay == 0 and exp == 5 and mate == 0:
         lbl_8 = tk.Label(root, text = "Ты - фарш ебанный", font=("Comic Sans", 26))
         lbl_result_3 = tk.Label(root, text="Ты нормис, но немного скучный. иди нахуй", font=("Comic Sans", 26))
@@ -290,6 +309,9 @@ def finale():
         lbl_8.pack()
         lbl_result_3.pack()
         lbl_pikcha2.pack()
+        lists.append(lbl_8)
+        lists.append(lbl_result_3)
+        lists.append(lbl_pikcha2)
     elif hui == 0 and gay == 0 and exp == 0 and mate == 5:
         lbl_9 = tk.Label(root, text = "Ты - хайповая свинка",font=("Comic Sans", 26))
         lbl_result_4 = tk.Label(root, text="Хайповая свинка - зумер, ты" + '\n' + "ты скорее всего куришь электронные пиписьки и" + '\n' + "занимаешься другими зумерскими" + '\n' + "делишками которые так популярны в стаде", font=("Comic Sans", 26))
@@ -300,6 +322,9 @@ def finale():
         lbl_result_4.pack()
         lbl_pikcha3.image = img3
         lbl_pikcha3.pack()
+        lists.append(lbl_9)
+        lists.append(lbl_result_4)
+        lists.append(lbl_pikcha3)
     elif hui >= 3:
         lbl_10 = tk.Label(root, text = "Ты - свинка импостер",font=("Comic Sans", 26))
         lbl_result_5 = tk.Label(root, text= "Если с тобой не общаться, то ты с виду вроде" + '\n' + "как нормальный парень, но стоит копнуть чутка поглубже," + '\n' + "чтобы все узнали что ты полон хуебесов. Если тебя оставить в загоне" + '\n' + "с животными, то будучи свиньей ты выебешь всех кур истанешь главным петухом", font=("Comic Sans", 14))
@@ -310,6 +335,10 @@ def finale():
         lbl_result_5.pack()
         lbl_pikcha4.image = img4
         lbl_pikcha4.pack()
+        lists.append(lbl_10)
+        lists.append(lbl_result_5)
+        lists.append(lbl_pikcha4)
+        
     elif exp >= 3:
         lbl_11 = tk.Label(root, text = "Ты - хамон",font=("Comic Sans", 26))
         lbl_result_6 = tk.Label(root, text= "Хамон поинтереснее фарша, но ты всё равно блядский нёрд", font=("Comic Sans", 20))
@@ -320,6 +349,9 @@ def finale():
         lbl_result_6.pack()
         lbl_pikcha5.image = img5
         lbl_pikcha5.pack()
+        lists.append(lbl_11)
+        lists.append(lbl_result_6)
+        lists.append(lbl_pikcha5)
     elif mate >= 3:
         lbl_12 = tk.Label(root, text = "Хрюксада Пигладан",font=("Comic Sans", 26))
         lbl_result_7 = tk.Label(root, text= "Постоянно на приколе, ебашишь разрывные шутки" + '\n' + "готов дажеах хахаха хаахАХАХхахаХАхахаХахаХахАХахахАхаХАхХАХАхаХА" + '\n' + "хАхаХахАХАХАХхаХАХАХАХХАХАХАХАХАХХХААХХАХахХХахХАхХАххХАхаХаХахХ" + '\n' + "аХахахХхХАхахаХАХАхаХхаХАххаХАхАХхАхАхаХАхАхХАхахаХАХАХАхАХахАХхАхаХХАХАХ" + '\n' + "ХХХХХХААААААААААААААААААХхАХхаХахахХАХАхаХахАХАХАХХХХахахХАХахХ" + '\n' + "ХАХхахахахахахХАххахаХАХхаХххахХАХАхАХАХахах", font=("Comic Sans", 20))
@@ -330,6 +362,9 @@ def finale():
         lbl_result_7.pack()
         lbl_pikcha6.image = img6
         lbl_pikcha6.pack()
+        lists.append(lbl_12)
+        lists.append(lbl_result_7)
+        lists.append(lbl_pikcha6)
     elif gay >= 3:
         lbl_13 = tk.Label(root, text = "Латентный дотер",font=("Comic Sans", 26))
         lbl_result_8 = tk.Label(root, text= "Ты один из тех людей к которым лучше не поворачиваться спиной" + '\n' + "о тебе ходят слухи, что как-то раз ты выебал всё свиное стадо", font=("Comic Sans", 20))
@@ -340,6 +375,9 @@ def finale():
         lbl_result_8.pack()
         lbl_pikcha7.image = img7
         lbl_pikcha7.pack()
+        lists.append(lbl_13)
+        lists.append(lbl_result_8)
+        lists.append(lbl_pikcha7)
     elif gay >= 2 and hui >= 2:
         lbl_14 = tk.Label(root, text = "Криповый кабан",font=("Comic Sans", 26))
         lbl_result_9 = tk.Label(root, text= "Порось, которому лучше не пиздеть лишнего," + '\n' + "сбежал со сибиреязвенного скотомогильника, характер скверный, не женат", font=("Comic Sans", 20))
@@ -350,6 +388,9 @@ def finale():
         lbl_result_9.pack()
         lbl_pikcha8.image = img8
         lbl_pikcha8.pack()
+        lists.append(lbl_14)
+        lists.append(lbl_result_9)
+        lists.append(lbl_pikcha8)
     elif exp >= 2 and mate >= 2:
         lbl_15 = tk.Label(root, text = "АХАХАХАХАХАХА это кто нахуй",font=("Comic Sans", 26))
         lbl_result_10 = tk.Label(root, text= "Еблан, ты как блять вообще получил этот результат", font=("Comic Sans", 20))
@@ -360,6 +401,10 @@ def finale():
         lbl_result_10.pack()
         lbl_pikcha9.image = img9
         lbl_pikcha9.pack()
+        lists.append(lbl_15)
+        lists.append(lbl_result_10)
+        lists.append(lbl_pikcha9)
+        
     elif hui >= 2 and mate >= 2:
         lbl_16 = tk.Label(root, text = "Хог в заточении",font=("Comic Sans", 26))
         lbl_result_11 = tk.Label(root, text= "Ты норм кент, но порой бываешь непослушной свинкой" + '\n' + "для твоего же блага и в целях сохранения анальной девственности"  + '\n' + "поросячьего стада тебя поместили в дурку", font=("Comic Sans", 20))
@@ -370,6 +415,10 @@ def finale():
         lbl_result_11.pack()
         lbl_pikcha10.image = img10
         lbl_pikcha10.pack()
+        lists.append(lbl_16)
+        lists.append(lbl_result_11)
+        lists.append(lbl_pikcha10)
+        
     elif hui >= 2 and exp >= 2:
         lbl_17 = tk.Label(root, text = "Философ",font=("Comic Sans", 26))
         lbl_result_12 = tk.Label(root, text= "Свинка филосовствствующая о жизни, но из-за своей" + '\n' + "поросячей натуры, не в силах изменить собственную жизнь", font=("Comic Sans", 20))
@@ -380,6 +429,10 @@ def finale():
         lbl_result_12.pack()
         lbl_pikcha11.image = img11
         lbl_pikcha11.pack()
+        lists.append(lbl_17)
+        lists.append(lbl_result_12)
+        lists.append(lbl_pikcha11)
+        
     elif gay >= 2 and exp >= 2:
         lbl_18 = tk.Label(root, text = "Хойщик",font=("Comic Sans", 26))
         lbl_result_13 = tk.Label(root, text= "Zrada! *hoink* Männer Peremoga des deutschen Reichstages! " + '\n' + " Seit *hoink* Monaten leiden wir alle unter der Qual eines Problems, " + '\n' + " das uns auch der *hoink* Versailler Vertrag, d.h. das Versailler Diktat, " + '\n' + " einst beschert hat *weeeeeee* ", font=("Comic Sans", 20))
@@ -390,6 +443,10 @@ def finale():
         lbl_result_13.pack()
         lbl_pikcha12.image = img12
         lbl_pikcha12.pack()
+        lists.append(lbl_18)
+        lists.append(lbl_result_13)
+        lists.append(lbl_pikcha12)
+        
     elif gay >= 2 and mate >= 2:
         lbl_19 = tk.Label(root, text = "Патимейкер",font=("Comic Sans", 26))
         lbl_result_14 = tk.Label(root, text= "скр скр скр в мёртвых найках скр скр скр патимейкер", font=("Comic Sans", 20))
@@ -400,16 +457,39 @@ def finale():
         lbl_result_14.pack()
         lbl_pikcha13.image = img13
         lbl_pikcha13.pack()
-    
-    
+        lists.append(lbl_19)
+        lists.append(lbl_result_14)
+        lists.append(lbl_pikcha13)
+    elif mate == 2 and hui == 1 and gay == 1 and exp == 1:
+        lbl_20 = tk.Label(root, text = "Ты - свин кент",font=("Comic Sans", 26))
+        lbl_result_15 = tk.Label(root, text= "В свином стаде - ты единтвенный верный порось на кого" + '\n' + " можно положить пятачок", font=("Comic Sans", 20))
+        img14 = PhotoImage(file = 'final14.png')
+        lbl_pikcha14 = Label(root)
+        lbl_pikcha14.configure(image=img14, width=img14.width(),height=img14.height())
+        lbl_20.pack()
+        lbl_result_15.pack()
+        lbl_pikcha14.image = img14
+        lbl_pikcha14.pack()
+    elif mate == 1 and hui == 1 and gay == 1 and exp == 2:
+        lbl_21 = tk.Label(root, text = "Ты - озарная свинка",font=("Comic Sans", 26))
+        lbl_result_16 = tk.Label(root, text= "Свинка в розовом пальто, но хотелось бы видеть тебя" + '\n' + "без него", font=("Comic Sans", 20))
+        img15 = PhotoImage(file = 'final15.png')
+        lbl_pikcha15 = Label(root)
+        lbl_pikcha15.configure(image=img15, width=img15.width(),height=img15.height())
+        lbl_21.pack()
+        lbl_result_16.pack()
+        lbl_pikcha15.image = img15
+        lbl_pikcha15.pack()
     
     else:
         labl = Label(root, text="Данил - клоун", font=("Comic Sans", 26))
         labl.pack()
+        lists.append(labl)
 
 
 ques_one()
 root.mainloop()
+
 
 
 
