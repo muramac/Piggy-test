@@ -480,12 +480,32 @@ def finale():
         lbl_result_16.pack()
         lbl_pikcha15.image = img15
         lbl_pikcha15.pack()
+     elif mate == 1 and hui == 1 and gay == 2 and exp == 1:
+        lbl_22 = tk.Label(root, text = "",font=("Comic Sans", 26))
+        lbl_result_17 = tk.Label(root, text= "", font=("Comic Sans", 20))
+        img16 = PhotoImage(file = 'final16.png')
+        lbl_pikcha16 = Label(root)
+        lbl_pikcha16.configure(image=img16, width=img16.width(),height=img15.height())
+        lbl_22.pack()
+        lbl_result_17.pack()
+        lbl_pikcha16.image = img16
+        lbl_pikcha16.pack()
+    elif mate == 1 and hui == 2 and gay == 1 and exp == 1:
+        lbl_23 = tk.Label(root, text = "Пизда капчённому",font=("Comic Sans", 26))
+        lbl_result_18 = tk.Label(root, text= "", font=("Comic Sans", 20))
+        img17 = PhotoImage(file = 'final17.png')
+        lbl_pikcha17 = Label(root)
+        lbl_pikcha17.configure(image=img17, width=img17.width(),height=img15.height())
+        lbl_22.pack()
+        lbl_result_17.pack()
+        lbl_pikcha17.image = img17
+        lbl_pikcha17.pack()
+
     
     else:
-        labl = Label(root, text="Данил - клоун", font=("Comic Sans", 26))
+        labl = Label(root, text="У Данила член маленький", font=("Comic Sans", 26))
         labl.pack()
         lists.append(labl)
-
 
 ques_one()
 root.mainloop()
